@@ -1,14 +1,37 @@
 class Gato
-    attr_accessor :habitatCaseiro, :atacaHumanos
-    def initialize(habitatCaseiro, atacaHumanos)
-        @habitatCaseiro = habitatCaseiro
-        @atacaHumanos = atacaHumanos
+    attr_accessor :habitatCaseiro, :atacaHumanos, :alimentacao, :somQueFaz, :cor, :idade
+    def initialize(cor, idade)
+        @habitatCaseiro = true
+        @atacaHumanos = true
+        @alimentacao = "Ração"
+        @somQueFaz = "Miau"
+        @cor = cor
+        @idade = idade
     end
-    
-    def darBote()
-        puts "Voce acabou de levar uma mordida!"
+
+    def eleEhCaseiro()
+        return self.habitatCaseiro
     end
- 
+
+    def atacaHumanos()
+        return self.atacaHumanos
+    end
+
+    def alimentacao()
+        return self.alimentacao
+    end
+
+    def somQueFaz()
+        return self.somQueFaz
+    end
+
+    def cor()
+        return self.cor
+    end
+
+    def idade()
+        return self.idade
+    end
 end
 
 
