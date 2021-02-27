@@ -9,27 +9,27 @@ class Gato
         @idade = idade
     end
 
-    def eleEhCaseiro()
+    def getHabitatCaseiro()
         return self.habitatCaseiro
     end
 
-    def atacaHumanos()
+    def getAtacaHumanos()
         return self.atacaHumanos
     end
 
-    def alimentacao()
+    def getAlimentacao()
         return self.alimentacao
     end
 
-    def somQueFaz()
+    def getSomQueFaz()
         return self.somQueFaz
     end
 
-    def cor()
+    def getCor()
         return self.cor
     end
 
-    def idade()
+    def getIdade()
         return self.idade
     end
 end

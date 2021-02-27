@@ -4,52 +4,40 @@ require_relative "./Gato.rb"
 
 describe "Classe Gato" do
 
-    it "Caso de teste: Validando o atributo habitatCaseiro" do
-        # Arrenge: "Preparando" o código
-        gatoBlues = Gato.new("Preto", 3)
-          
+    before(:each) do
+        #Arrange: "preparando" o código
+        @gatoBlues = Gato.new("Preto", 3)
+
+    end
+
+    it "Caso de teste: Validando o atributo habitatCaseiro" do          
         # Assert: "Conferir" se é a resposta esperada
-        expect(gatoBlues.eleEHCaseiro).to be_true  
+        expect(true).to eql @gatoBlues.getHabitatCaseiro 
     end
     
 
     it "Caso de teste: Validando o atributo atacaHumanos" do
-        # Arrenge: "Preparando" o código
-        gatoBlues = Gato.new("Preto", 3)
-          
         # Assert: "Conferir" se é a resposta esperada
-        expect(gatoBlues.atacaHumanos).to be_true  
+        expect(true).to eql @gatoBlues.getAtacaHumanos   
     end
 
     it "Caso de teste: Validando o atributo alimentacao" do
-        # Arrenge: "Preparando" o código
-        gatoBlues = Gato.new("Preto", 3)
-          
         # Assert: "Conferir" se é a resposta esperada
-        expect("Ração").to eql gatoBlues.alimentacao
+        expect("Ração").to eql @gatoBlues.getAlimentacao
     end
 
     it "Caso de teste: Validando o atributo SomQueFaz" do
-        # Arrenge: "Preparando" o código
-        gatoBlues = Gato.new("Preto", 3)
-          
         # Assert: "Conferir" se é a resposta esperada
-        expect("Miau").to eql gatoBlues.somQueFaz
+        expect("Miau").to eql @gatoBlues.getSomQueFaz
     end
 
     it "Caso de teste: Validando o atributo cor" do
-        # Arrenge: "Preparando" o código
-        gatoBlues = Gato.new("Preto", 3)
-          
         # Assert: "Conferir" se é a resposta esperada
-        expect("Preto").to eql gatoBlues.cor
+        expect("Preto").to eql @gatoBlues.getCor
     end
 
     it "Caso de teste: Validando o atributo idade" do
-        # Arrenge: "Preparando" o código
-        gatoBlues = Gato.new("Preto", 3)
-          
         # Assert: "Conferir" se é a resposta esperada
-        expect(3).to eql gatoBlues.idade
+        expect(3).to eql @gatoBlues.getIdade
     end
 end
